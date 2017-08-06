@@ -6,10 +6,10 @@ var osmStream = require('osm-stream'),
     LRU = require('lru-cache'),
     query_string = require('querystring');
 
-var bboxArray = ["-90.0", "-180.0", "90.0", "180.0"];
-var mapCenter = [51.505, -0.09];
+var bboxArray = ["-56.26776108757582", "-119.17968749999999", "31.653381399664", "-33.22265625"];
+var mapCenter = [-1.45, -78.57];
 var filteredBbox = false;
-var changeset_comment_match = null;
+var changeset_comment_match = '#AniversarioXIII_Latam';
 if (location.hash) {
     var parsed_hash = query_string.parse(location.hash.replace('#', ''));
     if (parsed_hash.length === 1 && parsed_hash[Object.keys(parsed_hash)[0]] === null) {
