@@ -9,7 +9,7 @@ var osmStream = require('osm-stream'),
 var bboxArray = ["-56.26776108757582", "-119.17968749999999", "31.653381399664", "-33.22265625"];
 var mapCenter = [-1.45, -78.57];
 var filteredBbox = true;
-var changeset_comment_match = nule;
+var changeset_comment_match = null;
 if (location.hash) {
     var parsed_hash = query_string.parse(location.hash.replace('#', ''));
     if (parsed_hash.length === 1 && parsed_hash[Object.keys(parsed_hash)[0]] === null) {
