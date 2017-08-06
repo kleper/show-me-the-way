@@ -8,7 +8,7 @@ var osmStream = require('osm-stream'),
 
 var bboxArray = ["-4.214943141390639", "-77.783203125", "12.940322128384627", "-67.1044921875"];
 var mapCenter = [4.598, -74.070];
-var filteredBbox = false;
+var filteredBbox = true;
 var changeset_comment_match = '#AniversarioXIII_Latam';
 if (location.hash) {
     var parsed_hash = query_string.parse(location.hash.replace('#', ''));
