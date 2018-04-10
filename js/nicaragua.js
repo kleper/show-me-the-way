@@ -9,7 +9,7 @@ var osmStream = require('osm-stream'),
 var bboxArray = ["10.547221495690104","-84.60845947265625","11.372338792141125","-83.5455322265625"];
 var mapCenter = [10.9496, -83.7828];
 var filteredBbox = true;
-var changeset_comment_match = '#Tareas FOSMco-100';
+var changeset_comment_match = '#MapeoIncendioIndioMaiz';
 if (location.hash) {
     var parsed_hash = query_string.parse(location.hash.replace('#', ''));
     if (parsed_hash.length === 1 && parsed_hash[Object.keys(parsed_hash)[0]] === null) {
