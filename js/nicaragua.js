@@ -9,7 +9,7 @@ var osmStream = require('osm-stream'),
 var bboxArray = ["10.547221495690104","-84.60845947265625","11.372338792141125","-83.5455322265625"];
 var mapCenter = [10.9496, -83.7828];
 var filteredBbox = true;
-var changeset_comment_match = '#MapeoIncendioIndioMaiz';
+var changeset_comment_match = null;
 if (location.hash) {
     var parsed_hash = query_string.parse(location.hash.replace('#', ''));
     if (parsed_hash.length === 1 && parsed_hash[Object.keys(parsed_hash)[0]] === null) {
@@ -68,7 +68,7 @@ if (filteredBbox) {
 
 var bing = new L.BingLayer(BING_KEY, 'Aerial').addTo(map);
 
-var osm = new L.TileLayer('//a.tiles.mapbox.com/v3/saman.map-f8nluy8d/{z}/{x}/{y}.jpg70', {
+var osm = new L.TileLayer('//api.mapbox.com/v4/mapbox.light/{z}/{x}/{y}{@2x}.jpg70?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NDg1bDA1cjYzM280NHJ5NzlvNDMifQ.d6e-nNyBDtmQCVwVNivz7A', {
     minZoom: 4,
     maxZoom: 8,
     attribution: '<a href="https://mapbox.com/about/maps/">Terms &amp; Conditions</a>'
